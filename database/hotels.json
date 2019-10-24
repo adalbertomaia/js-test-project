@@ -3,11 +3,11 @@
         {
             "name": "Lakewood",
             "prices": {
-                "regular": {
+                "Regular": {
                     "week": 110,
                     "weekend": 90
                 },
-                "reward": {
+                "Reward": {
                     "week": 80,
                     "weekend": 80
                 }
@@ -16,11 +16,11 @@
         {
             "name": "Bridgewood",
             "prices": {
-                "regular": {
+                "Regular": {
                     "week": 160,
                     "weekend": 60
                 },
-                "reward": {
+                "Reward": {
                     "week": 110,
                     "weekend": 50
                 }
@@ -29,11 +29,11 @@
         {
             "name": "Ridgewood",
             "prices": {
-                "regular": {
+                "Regular": {
                     "week": 220,
                     "weekend": 150
                 },
-                "reward": {
+                "Reward": {
                     "week": 100,
                     "weekend": 40
                 }
