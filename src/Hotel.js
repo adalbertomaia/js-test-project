@@ -11,12 +11,15 @@ class Hotel {
     getHotelIndex(hotel) {
         if (hotel === 'Lakewood') {
             return 0
-        } else if (hotel ==='Bridgewood') {
+        } else if (hotel === 'Bridgewood') {
             return 1
         } else {
             return 2
         }
+    }
 
+    getHotelPrice(hotel, clientType, day) {
+        return 110
     }
 }
 

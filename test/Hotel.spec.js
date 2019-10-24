@@ -31,4 +31,14 @@ describe('Hotel', function () {
         expect(hotelInstance.getHotelIndex(bridgewood)).to.eq(expectedBridgewood)
         expect(hotelInstance.getHotelIndex(ridgewood)).to.eq(expectedRigdewood)
     })
+
+    it('get hotel week regular price', function(){
+        const lakewood = 'Lakewwod'
+        const clientType = 'Regular'
+        const day = 'week'
+
+        const expected = 110
+
+        expect(hotelInstance.getHotelPrice(lakewood, clientType, day)).to.eq(expected)
+    })
 })
