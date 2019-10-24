@@ -24,4 +24,11 @@ describe('Input', function () {
         expect(inputInstance.getClientType(actual)).to.eq(expected)
 
     })
+
+    it('get day type', function(){
+        const actual = 'Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed)'
+        const expected = {"week": 0, "weekend": 0 }
+
+        expect(inputInstance.getDayType()).to.eql(expected)
+    })
 })
