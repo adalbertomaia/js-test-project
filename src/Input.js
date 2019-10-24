@@ -1,7 +1,7 @@
 class Input {
 
-    getClientType() {
-        return "Regular"
+    getClientType(client) {
+        return client.split(':')[0]
     }
 
 }
