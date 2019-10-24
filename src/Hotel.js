@@ -19,7 +19,10 @@ class Hotel {
     }
 
     getHotelPrice(hotel, clientType, day) {
-        return 110
+        const hotelIndex = this.getHotelIndex(hotel)
+        const hotelDatabase = this.getHotelDatabase()
+
+        return hotelDatabase.hotels[hotelIndex].prices[clientType][day] 
     }
 }
 
