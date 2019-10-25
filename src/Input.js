@@ -7,15 +7,10 @@ class Input {
     getDayQuantityByType(input) {
         input = input.split(": ")[1].split(",")
         let day = { "week": 0, "weekend": 0 }
-        let regExp = /\(([^)]+)\)/;
-        let weekday = ''
 
         for (let dayInput in input) {
-            weekday = regExp.exec(input[dayInput])[1]
             
-            if ((weekday === 'sat') ||
-                (weekday === 'sun')) {
-
+            if (this.itsWeekend(input[dayInput])) {
                 day.weekend++
             } else {
                 day.week++
@@ -23,6 +18,12 @@ class Input {
         }
 
         return day
+    }
+
+    itsWeekend(day) {
+        let regExp = /\(([^)]+)\)/;
+        let weekday = regExp.exec(day)[1]
+        return (weekday === 'sat') || (weekday === 'sun')
     }
 
 }

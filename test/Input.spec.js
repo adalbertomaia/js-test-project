@@ -31,4 +31,12 @@ describe('Input', function () {
 
         expect(inputInstance.getDayQuantityByType(actual)).to.eql(expected)
     })
+
+    it('check its weekend day', function(){
+        const weekend = "28Mar2009(sat)"
+        const weekday = "16Mar2009(mon)"
+        
+        expect(inputInstance.itsWeekend(weekend)).to.be.true
+        expect(inputInstance.itsWeekend(weekday)).to.be.false
+    })
 })
