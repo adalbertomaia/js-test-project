@@ -25,10 +25,10 @@ describe('Input', function () {
 
     })
 
-    it('get day type', function(){
-        const actual = 'Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed)'
-        const expected = {"week": 0, "weekend": 0 }
+    it('get day quantity by type', function(){
+        const actual = 'Regular: 16Mar2009(mon), 17Mar2009(tues), 28Mar2009(sat)'
+        const expected = {"week": 2, "weekend": 1 }
 
-        expect(inputInstance.getDayType()).to.eql(expected)
+        expect(inputInstance.getDayQuantityByType(actual)).to.eql(expected)
     })
 })
