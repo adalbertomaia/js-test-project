@@ -24,6 +24,10 @@ class Hotel {
 
         return hotelDatabase.hotels[hotelIndex].prices[clientType][day] 
     }
+
+    getSumHotelPrice(hotel, day, clientType) {
+        return 200
+    }
 }
 
 module.exports = Hotel
