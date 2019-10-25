@@ -1,7 +1,26 @@
 class Hotel {
 
-    findBestHotel() {
-        return 'Lakewood'
+    findBestHotel(input) {
+        const Input = require('../src/Input')
+        const inputInstance = new Input()
+        const lakewood = 'Lakewood'
+        const bridgewood = 'Bridgewood'
+        const ridgewood = 'Ridgewood'
+
+        const clientType = inputInstance.getClientType(input)
+        const day = inputInstance.getDayQuantityByType(input)
+
+        this.getSumHotelPrice(lakewood, day, clientType)
+
+        if (this.getSumHotelPrice(ridgewood, day, clientType) <=
+            this.getSumHotelPrice(bridgewood, day, clientType)) {
+            return ridgewood
+        } else if (this.getSumHotelPrice(bridgewood, day, clientType) <=
+            this.getSumHotelPrice(lakewood, day, clientType)) {
+            return bridgewood
+        } else {
+            return lakewood
+        }
     }
 
     getHotelDatabase() {

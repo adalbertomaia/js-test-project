@@ -11,10 +11,14 @@ describe('Hotel', function () {
     const bridgewood = 'Bridgewood'
     const ridgewood = 'Ridgewood'
 
-    it('should find best hotel', function(){
-        const expected = 'Lakewood'
+    it('find best hotel', function(){
+        const firstEntry = 'Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed)'
+        const secondEntry = 'Regular: 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun)'
+        const thirdEntry = 'Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)'
         
-        expect(hotelInstance.findBestHotel()).to.eq(expected)
+        expect(hotelInstance.findBestHotel(firstEntry)).to.eq(lakewood)
+        expect(hotelInstance.findBestHotel(secondEntry)).to.eq(bridgewood)
+        expect(hotelInstance.findBestHotel(thirdEntry)).to.eq(ridgewood)
     })
 
     it('get hotel database', function(){       
