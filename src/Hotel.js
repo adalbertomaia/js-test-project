@@ -22,11 +22,16 @@ class Hotel {
         const hotelIndex = this.getHotelIndex(hotel)
         const hotelDatabase = this.getHotelDatabase()
 
-        return hotelDatabase.hotels[hotelIndex].prices[clientType][day] 
+        return hotelDatabase.hotels[hotelIndex].prices[clientType][day]
     }
 
     getSumHotelPrice(hotel, day, clientType) {
-        return 200
+        const week = 'week'
+        const weekend = 'weekend'
+        let sum = this.getHotelPrice(hotel, clientType, week) * day.week +
+            this.getHotelPrice(hotel, clientType, weekend) * day.weekend
+
+        return sum
     }
 }
 
