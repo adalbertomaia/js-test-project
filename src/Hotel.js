@@ -10,8 +10,6 @@ class Hotel {
         const clientType = inputInstance.getClientType(input)
         const day = inputInstance.getDayQuantityByType(input)
 
-        this.getSumHotelPrice(lakewood, day, clientType)
-
         if (this.getSumHotelPrice(ridgewood, day, clientType) <=
             this.getSumHotelPrice(bridgewood, day, clientType)) {
             return ridgewood
